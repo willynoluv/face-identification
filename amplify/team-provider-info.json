@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-faceidentification-staging-202710-authRole",
+      "UnauthRoleArn": "arn:aws:iam::883541361348:role/amplify-faceidentification-staging-202710-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::883541361348:role/amplify-faceidentification-staging-202710-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-faceidentification-staging-202710-deployment",
+      "UnauthRoleName": "amplify-faceidentification-staging-202710-unauthRole",
+      "StackName": "amplify-faceidentification-staging-202710",
+      "StackId": "arn:aws:cloudformation:eu-west-2:883541361348:stack/amplify-faceidentification-staging-202710/2fa4a9e0-efe2-11eb-8285-0682dca9eef8",
+      "AmplifyAppId": "d3paslkvtd6u8r"
+    },
+    "categories": {
+      "auth": {
+        "faceidentification": {}
+      }
+    }
+  }
+}

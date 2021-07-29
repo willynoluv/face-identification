@@ -1,0 +1,60 @@
+<div class="page-content pt-5">
+  <div class="container">
+
+    <div class="row justify-content-center">
+
+      <div class="col-xl-5 col-lg-6 col-md-6">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <div class="row">
+
+              <div class="col-lg-12">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h4 class="project-title title-color">{{appName}}</h4>
+                    <h5 class="text-gray-900 my-4">Inscription</h5>
+                  </div>
+                  <form class="user" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                      <input type="email" formControlName="email" class="form-control form-control-user" placeholder="Adresse mail">
+                    </div>
+                    <ng-container *ngIf="registrationForm.controls.email.invalid && (registrationForm.controls.email.dirty || registrationForm.controls.email.touched)">
+                      <div class="alert alert-danger">Veuillez entrer une adresse mail valide</div>
+                    </ng-container>
+                    <div class="form-group">
+                      <input type="password" formControlName="password" class="form-control form-control-user" placeholder="Mot de passe">
+                    </div>
+                    <ng-container *ngIf="registrationForm.controls.password.invalid && (registrationForm.controls.password.dirty || registrationForm.controls.password.touched)">
+                      <div class="alert alert-danger">Votre mot de passe doit contenir 6 caractères minimum et au moins (une lettre majuscule, une lettre minuscule, un chiffre).</div>
+                    </ng-container>
+                    <div class="form-group">
+                      <input type="password" formControlName="rePassword" class="form-control form-control-user" placeholder="Retaper le mot de passe">
+                    </div>
+                    <ng-container *ngIf="registrationForm.controls.rePassword.invalid && (registrationForm.controls.rePassword.dirty || registrationForm.controls.rePassword.touched)">
+                      <div class="alert alert-danger">Le mot de passe doit contenir 6 caractères minimum, au moins (une lettre majuscule, une lettre minuscule, un chiffre) et être identique au premier mot de passe.</div>
+                    </ng-container>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-success" [disabled]="!registrationForm.valid">
+                      <i class="fa fa-sign-in-alt fa-fw"></i> S'inscrire
+                      </button>
+                    </div>
+                  </form>
+                  <hr>
+                  <div class="text-center">
+                    <a class="btn btn-sm btn-outline-dark" [routerLink]="['/connexion']">Connexion</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
